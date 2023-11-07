@@ -1,0 +1,665 @@
+@use "./general" as *;
+@use "./variable" as *;
+@use "./typography";
+
+nav {
+  width: 100%;
+  background-color: $white-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flexprop {
+  display: flex;
+  justify-content: space-between;
+  padding: 43px 0;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    color: $menu-color;
+    font-size: 40px;
+    font-family: DM_Serif_Display;
+    font-weight: 400;
+    padding: 0 0.5rem;
+  }
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+
+  .horizontal-list {
+    display: flex;
+    gap: 48px;
+
+    li a {
+      color: $menu-color;
+      font-size: 20px;
+      font-family: Jost;
+      font-weight: 400;
+    }
+  }
+}
+
+// banner section 
+.banner__div {
+  position: relative;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px 0px 0px 291px;
+  }
+
+  .container {
+    .banner__div--content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 30%;
+
+      h2 {
+        color: $menu-color;
+        font-family: DM_Serif_Display;
+        font-size: 84px;
+        font-weight: 400;
+      }
+
+      p {
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+        margin-top: 2px;
+        margin-bottom: 21px;
+      }
+
+      a {
+        button {
+          display: flex;
+          padding: 26px 48px;
+          background-color: #292F36;
+          border-radius: 18px;
+          color: $white-color;
+          font-family: Jost;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.36px;
+          align-items: center;
+          gap: 5px;
+          box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// .work__div {
+//   .work {
+//     padding: 22px;
+//     display: flex;
+//     gap: 42px;
+
+//     .work__div--container {
+//       text-align: center;
+//       align-items: center;
+//       display: flex;
+//       flex-direction: column;
+//       h2 {
+//         color: $menu-color;
+//         font-family: DM_Serif_Display;
+//         font-size: 25px;
+//         font-weight: 400;
+//         padding-bottom: 20px;
+//       }
+
+//       p {
+//         color: $brown-color;
+//         font-family: Jost;
+//         font-size: 22px;
+//         font-weight: 400;
+//         letter-spacing: 0.22px;
+//       }
+
+//       button {
+//         margin-top: 50px;
+//         display: flex;
+//         color: $brown-color;
+//         font-family: Jost;
+//         font-size: 18px;
+//         font-weight: 600;
+//         letter-spacing: 0.36px;
+//         align-items: center;
+//         border: none;
+//       }
+//     }
+//   }
+// }
+
+.work__div {
+  margin: 200px 0;
+
+  .row {
+    width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+
+    .work__div--container {
+      width: calc(33.33% - 42px);
+      margin: 0 21px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        color: $menu-color;
+        font-family: DM_Serif_Display;
+        font-size: 25px;
+        font-weight: 400;
+        padding-bottom: 20px;
+      }
+
+      p {
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+      }
+
+      button {
+        margin-top: 50px;
+        display: flex;
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.36px;
+        align-items: center;
+        border: none;
+        gap: 6px;
+        background-color: $white-color;
+      }
+    }
+  }
+}
+
+// about section starts 
+.about__div {
+  .about {
+    display: flex;
+    justify-content: space-between;
+
+    // left side of about section 
+    .about__div--left {
+      width: 472px;
+      padding: 32.5px 0;
+
+      // heading of about section 
+      h2 {
+        color: $menu-color;
+        font-family: DM_Serif_Display;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 33px;
+      }
+
+      // content of heading section 
+      p {
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+        margin-bottom: 45px;
+      }
+
+      // icon and call information 
+      .about__div--icon {
+        display: flex;
+        margin-bottom: 47px;
+
+        .about__div--call {
+          margin: 15px;
+          color: $brown-color;
+          font-family: Jost;
+
+          h3 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.24px;
+          }
+
+          p {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 0.22px;
+            margin: 0;
+          }
+        }
+      }
+
+      // button  
+      a {
+        button {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          color: $white-color;
+          font-family: Jost;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.36px;
+          padding: 26px 31px;
+          background-color: $menu-color;
+          border-radius: 18px;
+          border: none;
+          box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+        }
+      }
+    }
+
+    //right side of about div
+    .about__div--right {
+      img {
+        border-radius: 0px 326.5px 0px 123px;
+      }
+    }
+  }
+}
+
+// testimonial section 
+.testimonial__div {
+  margin-top: 200px;
+
+  // inside container 
+  .test {
+    background-color: $sand-color;
+    padding: 88px 0;
+    border-radius: 10%;
+
+    // heading part 
+    .testimonial__div--heading {
+      padding: 0 300px;
+      padding-bottom: 38px;
+
+      h2 {
+        color: $menu-color;
+        text-align: center;
+        font-family: DM_Serif_Display;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    }
+
+    // div which contains all the cards inside it 
+    .card {
+      display: flex;
+
+      // individual card
+      .testimonial__div--card {
+        padding: 60.5px 37px 54px;
+        margin: 0 10px;
+        width: calc(33.33% - 20px);
+        background-color: $white-color;
+        border-radius: 5%;
+
+        // information contains image, name, city
+        .info {
+          display: flex;
+          margin-bottom: 39px;
+          gap: 25px;
+          align-items: center;
+
+          img {
+            border-radius: 50px;
+          }
+
+          h3 {
+            color: $menu-color;
+            font-family: DM_Serif_Display;
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+          }
+
+          p {
+            color: $brown-color;
+            font-family: Jost;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.18px;
+          }
+        }
+
+        // content inside the card 
+        p {
+          color: $brown-color;
+          font-family: Jost;
+          font-size: 22px;
+          font-weight: 400;
+          letter-spacing: 0.22px;
+        }
+      }
+    }
+  }
+}
+
+// section of logos of brands 
+.logo__div {
+  margin-top: 150px;
+
+  // container which contains all the logos 
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 54px;
+  }
+}
+
+//project section started
+.project__div {
+  margin-top: 150px;
+
+  // heading and paragraph of project 
+  .project__div--heading {
+    padding: 0 220px 93px;
+
+    h2 {
+      color: $menu-color;
+      font-family: DM_Serif_Display;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    p {
+      color: $brown-color;
+      text-align: center;
+      font-family: Jost;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.22px;
+    }
+  }
+
+  // class which contains cards 
+  .space {
+    margin-bottom: 56px;
+  }
+
+  //div which contains project card
+  .project__div--container {
+    display: flex;
+    justify-content: space-between;
+
+    //div of card
+    .project__div--content {
+
+      //image of project card one 
+      .project__image--one {
+        border-radius: 0px 80px 0px 0px;
+      }
+
+      //image of project card two
+      .project__image--two {
+        border-radius: 80px 0px 0px 0px;
+      }
+
+      //image of project card three
+      .project__image--three {
+        border-radius: 0px 0px 80px 0px;
+      }
+
+      //image of project card four
+      .project__image--four {
+        border-radius: 0px 0px 0px 80px;
+      }
+
+      //content of the card
+      .project__content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+
+        //left side content
+        .project__content--left {
+          h2 {
+            color: $menu-color;
+            font-family: DM_Serif_Display;
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+          }
+
+          p {
+            color: $brown-color;
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 0.22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// counter section starts 
+.counter__div {
+  margin-top: 150px;
+  background-color: $sand-color;
+
+  .counter {
+    padding: 150px 60px;
+    display: flex;
+
+    .border__counter {
+      border-right: 1px solid black;
+    }
+
+    .counter__div--content {
+      text-align: center;
+      position: relative;
+      padding-right: 70px;
+
+      // &::before,
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   width: 1px;
+      //   background-color: black;
+      // }
+      // &::before {
+      //   left: 70px;
+      // }
+
+
+      h2 {
+        color: $light-brown;
+        font-family: DM_Serif_Display;
+        font-size: 85px;
+        font-weight: 400;
+        letter-spacing: 1.7px;
+      }
+
+      p {
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+      }
+    }
+  }
+}
+
+// blog section start 
+.blog__div {
+  margin-top: 200px 0;
+
+  .blog__div--heading {
+    padding: 0 190px 52px;
+  }
+
+  .div__blog--card {
+    padding: 21px;
+    border-radius: 62px;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    border: 1px solid $border-color;
+    position: relative;
+
+    .card__image {
+
+      img {
+        border-radius: 45px 45px 0 0;
+      }
+    }
+
+    .card__tag {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+    }
+
+    .card__content {
+      padding: 21px 0;
+
+      .card__moreinfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        p {
+          color: $brown-color;
+          font-family: Jost;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.16px;
+        }
+      }
+    }
+
+    h2 {
+      color: $menu-color;
+      font-family: DM_Serif_Display;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0.25px;
+    }
+
+  }
+
+  .margin__card {
+    margin: 0 27px;
+    background-color: $sand-color;
+  }
+}
+
+.contact__div {
+  .contact {
+    background-color: $menu-color;
+    padding: 80px 0;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: $white-color;
+      font-family: DM_Serif_Display;
+      font-size: 50px;
+      font-weight: 400;
+    }
+
+    p {
+      color: $white-color;
+      font-family: Jost;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.22px;
+      padding-top: 11px;
+      padding-bottom: 32px;
+    }
+
+    a {
+      button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: $white-color;
+        font-family: Jost;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.36px;
+        padding: 26px 37px;
+        background-color: $light-brown;
+        border-radius: 18px;
+        border: none;
+        box-shadow: 0px 10px 20px 0px #1F2022;;
+      }
+    }
+  }
+}
+
+footer{
+  margin-top: 135px;
+  .foot{
+    justify-content: space-between;
+    .footer__one{
+      p{
+        width: 393px;
+        color: $brown-color;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+        padding-bottom: 31px;
+        padding-top: 18px;
+      }
+      .footer_logos{
+        width: 225px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    display: flex;
+    .footer_two{
+      flex-direction: column;
+      gap: 0;
+      text-align: left;
+      .right-nav{
+  align-items: flex-start;
+      }
+      p{
+        padding: 15px 0px;
+      }
+      .vertical-list{
+        flex-direction: column;
+        gap: 0;
+        li{
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
