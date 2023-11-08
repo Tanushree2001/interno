@@ -175,7 +175,6 @@ nav {
   display: flex;
 }
 .work__div .row .work__div--container {
-  width: calc(33.33% - 42px);
   margin: 0 21px;
   text-align: center;
   display: flex;
@@ -409,14 +408,14 @@ nav {
   background-color: #F4F0EC;
 }
 .counter__div .counter {
-  padding: 150px 60px;
+  padding: 150px 0;
   display: flex;
+  justify-content: space-around;
 }
 .counter__div .counter .border__counter {
-  border-right: 1px solid black;
+  border-right: 1px solid #CDA274;
 }
 .counter__div .counter .counter__div--content {
-  text-align: center;
   position: relative;
   padding-right: 70px;
 }
@@ -424,6 +423,7 @@ nav {
   color: #CDA274;
   font-family: DM_Serif_Display;
   font-size: 85px;
+  text-align: center;
   font-weight: 400;
   letter-spacing: 1.7px;
 }
@@ -454,7 +454,13 @@ nav {
 .blog__div .div__blog--card .card__tag {
   position: absolute;
   top: 50%;
-  z-index: 2;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  background-color: #ffffff;
+  left: 40px;
 }
 .blog__div .div__blog--card .card__content {
   padding: 21px 0;
@@ -527,8 +533,8 @@ footer {
   margin-top: 135px;
 }
 footer .foot {
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
 }
 footer .foot .footer__one p {
   width: 393px;
@@ -545,21 +551,30 @@ footer .foot .footer__one .footer_logos {
   display: flex;
   justify-content: space-between;
 }
-footer .foot .footer_two {
-  flex-direction: column;
-  gap: 0;
-  text-align: left;
+footer .foot .fix__width {
+  width: 258px;
 }
-footer .foot .footer_two .right-nav {
-  align-items: flex-start;
+footer .foot .footer__two h2 {
+  color: #292F36;
+  font-family: DM_Serif_Display;
+  font-size: 25px;
+  font-weight: 400;
 }
-footer .foot .footer_two p {
-  padding: 15px 0px;
+footer .foot .footer__two .vertical-list li {
+  padding: 18px 0;
 }
-footer .foot .footer_two .vertical-list {
-  flex-direction: column;
-  gap: 0;
+footer .foot .footer__two .vertical-list li a {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
 }
-footer .foot .footer_two .vertical-list li {
-  padding: 15px;
+footer .foot .footer__two p {
+  padding: 18px 0;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
 }/*# sourceMappingURL=style.css.map */
