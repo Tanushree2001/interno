@@ -1,6 +1,7 @@
 @use "./general" as *;
 @use "./variable" as *;
 @use "./typography";
+// @use "./media";
 
 nav {
   width: 100%;
@@ -13,10 +14,38 @@ nav {
   margin: 0 auto;
 }
 
+p {
+  color: $brown-color;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+}
+
+h2 {
+  color: $menu-color;
+  font-family: DM_Serif_Display;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .flexprop {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 43px 0;
+}
+
+.btn__primary {
+  display: inline-flex;
+  gap: 10px;
+  font-family: Jost;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.36px;
+  align-items: center;
+  cursor: pointer;
 }
 
 .left-nav {
@@ -50,10 +79,49 @@ nav {
   }
 }
 
+.bar__icon{
+  width: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown__menu{
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 0;
+  top: 90px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  // background-color: $menu-color;
+  backdrop-filter: blur(15px);
+  z-index: 2;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+      color: $menu-color;
+    }
+  }
+}
+.open{
+  height: 300px;
+}
+
+.display__flex {
+  display: flex;
+}
+
 // banner section 
 .banner__div {
   position: relative;
-
 
   img {
     width: 100%;
@@ -66,41 +134,24 @@ nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      max-width: 30%;
+      max-width: 35%;
 
       h2 {
-        color: $menu-color;
-        font-family: DM_Serif_Display;
         font-size: 84px;
-        font-weight: 400;
       }
 
       p {
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
         margin-top: 2px;
         margin-bottom: 21px;
       }
 
-      a {
-        button {
-          display: flex;
-          padding: 26px 48px;
-          background-color: #292F36;
-          border-radius: 18px;
-          color: $white-color;
-          font-family: Jost;
-          font-size: 18px;
-          font-weight: 600;
-          letter-spacing: 0.36px;
-          align-items: center;
-          gap: 5px;
-          box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-          border: none;
-        }
+      .banner__btn {
+        padding: 26px 48px;
+        background-color: #292F36;
+        border-radius: 18px;
+        color: $white-color;
+        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+        border: none;
       }
     }
   }
@@ -109,46 +160,22 @@ nav {
 .work__div {
   margin: 200px 0;
 
-  .row {
-    width: 100%;
+  .work__div--container {
+    margin: 0 21px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .work__div--container {
-      margin: 0 21px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    h2 {
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
 
-      h2 {
-        color: $menu-color;
-        font-family: DM_Serif_Display;
-        font-size: 25px;
-        font-weight: 400;
-        padding-bottom: 20px;
-      }
-
-      p {
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
-      }
-
-      button {
-        margin-top: 50px;
-        display: flex;
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 0.36px;
-        align-items: center;
-        border: none;
-        gap: 6px;
-        background-color: $white-color;
-      }
+    .work_btn {
+      margin-top: 50px;
+      color: $brown-color;
+      background-color: $white-color;
     }
   }
 }
@@ -156,7 +183,6 @@ nav {
 // about section starts 
 .about__div {
   .about {
-    display: flex;
     justify-content: space-between;
 
     // left side of about section 
@@ -166,21 +192,11 @@ nav {
 
       // heading of about section 
       h2 {
-        color: $menu-color;
-        font-family: DM_Serif_Display;
-        font-size: 50px;
-        font-weight: 400;
-        letter-spacing: 1px;
         margin-bottom: 33px;
       }
 
       // content of heading section 
       p {
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
         margin-bottom: 45px;
       }
 
@@ -210,22 +226,14 @@ nav {
       }
 
       // button  
-      a {
-        button {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          color: $white-color;
-          font-family: Jost;
-          font-size: 18px;
-          font-weight: 600;
-          letter-spacing: 0.36px;
-          padding: 26px 31px;
-          background-color: $menu-color;
-          border-radius: 18px;
-          border: none;
-          box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-        }
+      .about__btn {
+        color: $white-color;
+        padding: 26px 31px;
+        background-color: $menu-color;
+        border-radius: 18px;
+        border: none;
+        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+
       }
     }
 
@@ -245,8 +253,19 @@ nav {
   // inside container 
   .test {
     background-color: $sand-color;
-    padding: 88px 0;
-    border-radius: 10%;
+    padding: 88px 0px;
+    border-radius: 100px;
+    background-color: pink;
+
+    .responsive{
+      .slick-dots{
+        li{
+          button::before{
+            font-size: 50px;
+          }
+        }
+      }
+    }
 
     // heading part 
     .testimonial__div--heading {
@@ -254,32 +273,36 @@ nav {
       padding-bottom: 38px;
 
       h2 {
-        color: $menu-color;
         text-align: center;
-        font-family: DM_Serif_Display;
-        font-size: 50px;
-        font-weight: 400;
-        letter-spacing: 1px;
       }
     }
 
     // div which contains all the cards inside it 
     .card {
-      display: flex;
+      // padding: 0 24px;
+      gap: 20px;
+
+      .slick-track{
+        display: flex;
+        gap: 20px;
+        // padding: 0 4px;
+      }
 
       // individual card
       .testimonial__div--card {
-        padding: 60.5px 37px 54px;
-        margin: 0 10px;
-        width: calc(33.33% - 20px);
+        // padding: 58px 37px 54px;
+        padding: 30px;
+        height: 340px;
+        width: 33.33%;
         background-color: $white-color;
-        border-radius: 5%;
+        border-radius: 50px;
 
         // information contains image, name, city
         .info {
           display: flex;
           margin-bottom: 39px;
-          gap: 25px;
+          // gap: 25px;
+          gap: 20px;
           align-items: center;
 
           img {
@@ -295,22 +318,10 @@ nav {
           }
 
           p {
-            color: $brown-color;
-            font-family: Jost;
-            font-size: 18px;
-            font-weight: 400;
             letter-spacing: 0.18px;
           }
         }
 
-        // content inside the card 
-        p {
-          color: $brown-color;
-          font-family: Jost;
-          font-size: 22px;
-          font-weight: 400;
-          letter-spacing: 0.22px;
-        }
       }
     }
   }
@@ -322,9 +333,9 @@ nav {
 
   // container which contains all the logos 
   .logo {
-    display: flex;
     justify-content: space-between;
     padding: 0 54px;
+    align-items: center;
   }
 }
 
@@ -337,21 +348,11 @@ nav {
     padding: 0 220px 93px;
 
     h2 {
-      color: $menu-color;
-      font-family: DM_Serif_Display;
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 1px;
       text-align: center;
     }
 
     p {
-      color: $brown-color;
       text-align: center;
-      font-family: Jost;
-      font-size: 22px;
-      font-weight: 400;
-      letter-spacing: 0.22px;
     }
   }
 
@@ -396,7 +397,7 @@ nav {
 
         //left side content
         .project__content--left {
-          h2 {
+          .project__link--primary {
             color: $menu-color;
             font-family: DM_Serif_Display;
             font-size: 25px;
@@ -404,7 +405,7 @@ nav {
             letter-spacing: 0.5px;
           }
 
-          p {
+          .project__link--secondary {
             color: $brown-color;
             font-family: Jost;
             font-size: 22px;
@@ -424,10 +425,7 @@ nav {
 
   .counter {
     padding: 150px 0;
-    display: flex;
     justify-content: space-around;
-    
-
 
     .border__counter {
       border-right: 1px solid $light-brown;
@@ -436,33 +434,36 @@ nav {
     .counter__div--content {
       position: relative;
       padding-right: 70px;
-      
+
       h2 {
         color: $light-brown;
-        font-family: DM_Serif_Display;
         font-size: 85px;
         text-align: center;
-        font-weight: 400;
         letter-spacing: 1.7px;
       }
 
-      p {
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
-      }
     }
   }
 }
 
 // blog section start 
-.blog__div {
-  margin-top: 200px 0;
+.div__blog {
+  margin: 200px 0;
 
   .blog__div--heading {
     padding: 0 190px 52px;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .div__blog--content {
+    gap: 27px;
   }
 
   .div__blog--card {
@@ -501,27 +502,24 @@ nav {
         margin-top: 30px;
 
         p {
-          color: $brown-color;
-          font-family: Jost;
           font-size: 16px;
-          font-weight: 400;
           letter-spacing: 0.16px;
         }
       }
     }
 
     h2 {
-      color: $menu-color;
-      font-family: DM_Serif_Display;
+      // color: $menu-color;
+      // font-family: DM_Serif_Display;
       font-size: 25px;
-      font-weight: 400;
+      // font-weight: 400;
       letter-spacing: 0.25px;
     }
 
   }
 
   .margin__card {
-    margin: 0 27px;
+    // margin: 0 27px;
     background-color: $sand-color;
   }
 }
@@ -538,38 +536,21 @@ nav {
 
     h2 {
       color: $white-color;
-      font-family: DM_Serif_Display;
-      font-size: 50px;
-      font-weight: 400;
     }
 
     p {
       color: $white-color;
-      font-family: Jost;
-      font-size: 22px;
-      font-weight: 400;
-      letter-spacing: 0.22px;
       padding-top: 11px;
       padding-bottom: 32px;
     }
 
-    a {
-      button {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        color: $white-color;
-        font-family: Jost;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 0.36px;
-        padding: 26px 37px;
-        background-color: $light-brown;
-        border-radius: 18px;
-        border: none;
-        box-shadow: 0px 10px 20px 0px #1F2022;
-        ;
-      }
+    .contact_btn {
+      color: $white-color;
+      padding: 26px 37px;
+      background-color: $light-brown;
+      border-radius: 18px;
+      border: none;
+      box-shadow: 0px 10px 20px 0px #1F2022;
     }
   }
 }
@@ -586,11 +567,6 @@ footer {
     .footer__one {
       p {
         width: 393px;
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
         padding-bottom: 31px;
         padding-top: 18px;
       }
@@ -608,10 +584,7 @@ footer {
 
     .footer__two {
       h2 {
-        color: $menu-color;
-        font-family: DM_Serif_Display;
         font-size: 25px;
-        font-weight: 400;
       }
 
       .vertical-list {
@@ -630,13 +603,655 @@ footer {
 
       p {
         padding: 18px 0;
-        color: $brown-color;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        letter-spacing: 0.22px;
       }
 
+    }
+  }
+
+  .copyright {
+    margin-top: 134px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 46px;
+  }
+}
+
+//large desktop screen
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .banner__div {
+    img {
+      border-radius: 0px 0px 0px 200px;
+    }
+
+    .container {
+      .banner__div--content {
+        max-width: 47%;
+      }
+    }
+  }
+}
+
+//small desktop design.
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .banner__div {
+    img {
+      border-radius: 0px 0px 0px 140px;
+    }
+
+    .container {
+      .banner__div--content {
+        max-width: 55%;
+      }
+    }
+  }
+
+  .about__div {
+    .about {
+      gap: 75px;
+
+      .about__div--left {
+        width: 50%;
+      }
+
+      .about__div--right {
+        width: 50%;
+
+        img {
+          height: 100%;
+          border-radius: 0px 245.5px 0px 123px;
+        }
+      }
+    }
+  }
+
+  .testimonial__div {
+    .test {
+      .testimonial__div--heading {
+        padding: 0 200px;
+      }
+
+      .card {
+        // padding: 0 16px;
+        // gap: 16px;
+
+        .testimonial__div--card {
+          // padding: 58px 2px 54px;
+          padding: 30px;
+          height: 450px;
+        }
+      }
+    }
+  }
+
+  .project__div {
+    .project {
+      .project__div--heading {
+        padding: 0 124px 93px;
+      }
+
+      .project__div--container {
+        gap: 80px;
+      }
+    }
+  }
+
+  .div__blog {
+    .blog__div--heading {
+      padding: 0 66px 52px;
+    }
+
+    .div__blog--content {
+      .div__blog--card {
+        .card__tag {
+          top: 38%;
+        }
+      }
+    }
+  }
+
+}
+
+// For tablets
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: pink;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .btn__primary {
+    font-size: 12px;
+  }
+
+  nav {
+    .right-nav {
+      gap: 20px;
+
+      .horizontal-list {
+        gap: 15px;
+      }
+    }
+  }
+
+  .banner__div {
+    img {
+      border-radius: 0px 0px 0px 150px;
+    }
+
+    .container {
+      .banner__div--content {
+        max-width: 38%;
+
+        h2 {
+          font-size: 42px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .banner__btn {
+          padding: 13px 24px;
+          font-size: 8px;
+          border-radius: 9px;
+        }
+      }
+    }
+  }
+
+  .work__div {
+    .display__flex {
+      padding: 0px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .work__div--container {
+        width: calc(50% - 42px);
+        padding: 0 58px;
+      }
+    }
+  }
+
+  .about__div {
+    .about {
+      .about__div--left {
+        .about__div--icon {
+          align-items: center;
+
+          img {
+            height: auto;
+            width: 50px;
+          }
+
+          .about__div--call {
+            h3 {
+              font-size: 12px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+
+        a {
+          font-size: 9px;
+        }
+
+        .about__btn {
+          padding: 13px 15px;
+          border-radius: 9px;
+        }
+      }
+
+      .about__div--right {
+        img {
+          border-radius: 0px 163.5px 0px 61.5px;
+        }
+      }
+    }
+  }
+
+  .testimonial__div{
+    .test{
+      .testimonial__div--heading{
+        padding: 0px 210px;
+      }
+      .card{
+        .testimonial__div--card{
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .logo__div {
+    .logo {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 25px;
+    }
+  }
+
+  .project__div {
+    .project {
+      .project__div--heading{
+        padding: 0px 160px 93px;
+      }
+      .project__div--container {
+        gap: 20px;
+        .project__div--content{
+          .project__content{
+            .project__content--left{
+              .project__link--primary{
+                font-size: 16px;
+              }
+              .project__link--secondary{
+                font-size: 12px;
+              }
+            }
+            .project__content--right{
+              width: 35px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .counter__div {
+    .counter {
+      .counter__div--content {
+        padding-right: 42px;
+
+        h2{
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+  .div__blog {
+    .div__blog--content {
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .div__blog--card {
+        width: calc(50% - 13.5px);
+        .card__tag{
+          top: 45%;
+        }
+      }
+    }
+  }
+
+  .contact__div {
+    .contact {
+      .contact_btn {
+        padding: 13px 18px;
+        border-radius: 9px;
+      }
+    }
+  }
+
+  footer {
+    .foot {
+      .footer__one {
+        p {
+          width: 215px;
+        }
+
+        .footer_logos {
+          width: 126px;
+        }
+      }
+
+      .footer__two {
+        h2 {
+          font-size: 16px;
+        }
+
+        .vertical-list li a {
+          font-size: 12px;
+        }
+      }
+
+      .fix__width {
+        width: 140px;
+      }
+    }
+  }
+}
+
+//mobile design
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    background-color: blue;
+    max-width: 540px;
+    margin: 0 auto;
+
+  }
+
+  .display__flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    nav{
+      .right-nav{
+        display: none;
+      }
+      .bar__icon{
+        display: block;
+      }
+      .dropdown__menu{
+        display: block;
+      }
+    }
+  }
+
+  .banner__div {
+    img {
+      border-radius: 0px 0px 0px 40px;
+    }
+
+    .container {
+      .banner__div--content {
+        max-width: 90%;
+
+        h2 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        a {
+          font-size: 12px;
+        }
+
+        .banner__btn {
+          padding: 4px 8px;
+          border-radius: 6px;
+        }
+      }
+
+    }
+  }
+
+  .work__div {
+    .display__flex {
+      gap: 21px;
+    }
+  }
+
+  .about__div {
+    .about {
+      .about__div--left {
+        width: 100%;
+      }
+
+      .about__div--right {
+        img {
+          border-radius: 0px 126.5px 0px 50px;
+        }
+      }
+    }
+  }
+
+  .testimonial__div {
+    .test {
+      .testimonial__div--heading {
+        padding: 0;
+      }
+      .card{
+        .testimonial__div--card{
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  .logo__div {
+    .logo {
+      gap: 50px;
+    }
+  }
+
+  .project__div {
+    .project {
+      .project__div--heading {
+        padding: 0;
+      }
+    }
+  }
+
+  .counter__div{
+    .counter{ 
+      padding: 0;
+      gap: 20px;
+      .border__counter{
+        border: none
+      }
+      .counter__div--content{
+        padding: 0;
+      }
+    }
+  }
+  .div__blog {
+    .blog__div--heading {
+      padding: 0;
+    }
+
+    .div__blog--content {
+      .div__blog--card {
+        .card__image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .card__tag {
+          top: 55%;
+        }
+      }
+    }
+  }
+  .contact__div{
+    .contact{
+      text-align: center;
+    }
+  }
+
+  footer {
+    .foot{
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    background-color: green;
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+
+  .display__flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    nav{
+      .right-nav{
+        display: none;
+      }
+      .bar__icon{
+        display: block;
+      }
+      .dropdown__menu{
+        display: block;
+      }
+    }
+  }
+
+  .banner__div {
+    img {
+      border-radius: 0px 0px 0px 40px;
+    }
+
+    .container {
+      .banner__div--content {
+        max-width: 90%;
+
+        h2 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        a {
+          font-size: 12px;
+        }
+
+        .banner__btn {
+          padding: 4px 8px;
+          border-radius: 6px;
+        }
+      }
+
+    }
+  }
+
+  .work__div {
+    .display__flex {
+      gap: 21px;
+    }
+  }
+
+  .about__div {
+    .about {
+      .about__div--left {
+        width: 100%;
+      }
+
+      .about__div--right {
+        img {
+          border-radius: 0px 126.5px 0px 50px;
+        }
+      }
+    }
+  }
+
+  .testimonial__div {
+    .test {
+      .testimonial__div--heading {
+        padding: 0;
+      }
+      .card{
+        .testimonial__div--card{
+          height: 300px;
+        }
+      }
+    }
+  }
+  .logo__div {
+    .logo {
+      gap: 50px;
+    }
+  }
+
+  .project__div {
+    .project {
+      .project__div--heading {
+        padding: 0;
+      }
+    }
+  }
+
+  .counter__div{
+    .counter{ 
+      padding: 0;
+      gap: 20px;
+      .border__counter{
+        border: none
+      }
+      .counter__div--content{
+        padding: 0;
+      }
+    }
+  }
+  .div__blog {
+    .blog__div--heading {
+      padding: 0;
+    }
+
+    .div__blog--content {
+      .div__blog--card {
+        .card__image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .card__tag {
+          top: 40%;
+        }
+      }
+    }    
+  }
+
+  .contact__div{
+    .contact{
+      text-align: center;
+    }
+  }
+
+  footer {
+    .foot{
+      flex-wrap: wrap;
+      gap: 20px;
+      .footer__one{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+          width: fit-content;
+        }
+      }
+      .fix__width{
+        text-align: center;
+        width: fit-content;
+      }
     }
   }
 }

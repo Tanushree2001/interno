@@ -4,8 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Interno</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/dropdown.js"></script>
 </head>
 
 <body>
@@ -32,6 +38,20 @@
             <img src="./images/Search.svg" alt="none">
           </div>
         </div>
+        <div class="bar__icon">
+          <img src="./images/bars.png" alt="none" class="bar__img">
+        </div>
+        <div class="dropdown__menu">
+          <ul class="dropdown__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><img src="./images/Search.svg" alt="none"></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -43,13 +63,11 @@
           <h2>Let Your Home Be Unique</h2>
           <p>There are many variations of the passages of lorem ipsum from available, variations of the passages.</p>
           <div>
-            <a href="#">
-            <button>
+            <a href="#" class="btn__primary banner__btn">
               Get Started
               <div>
                 <img src="./images/Vector.svg" alt="">
               </div>
-            </button>
             </a>
           </div>
         </div>
@@ -59,15 +77,15 @@
     <!--Work section started-->
     <section class="work__div">
       <!--Content for max width-->
-      <div class="container row">
+      <div class="container display__flex">
 
         <!--First content-->
         <div class="work__div--container">
           <h2>Project Plan</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button">
-            <a href="#">
-            <button>Read More <div><img src="./images/Vector.svg" alt="none"></div></button>
+            <a href="#" class="btn__primary work_btn">
+            Read More <div><img src="./images/Vector.svg" alt="none"></div>
             </a>
             </div>
         </div>
@@ -77,19 +95,19 @@
           <h2>Interior Work</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button">
-            <a href="#">
-              <button>Read More <div><img src="./images/Vector.svg" alt="none"></div></button>
+            <a href="#" class="btn__primary work_btn">
+              Read More <div><img src="./images/Vector.svg" alt="none"></div>
             </a>
           </div>
         </div>
 
         <!--Third Content-->
-        <div class="work__div--container">
+        <div class="work__div--container center">
           <h2>Realization</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button"> 
-            <a href="#">
-              <button>Read More <div><img src="./images/Vector.svg" alt="none"></div></button>
+            <a href="#" class="btn__primary work_btn">
+              Read More <div><img src="./images/Vector.svg" alt="none"></div>
             </a>
           </div>
         </div>
@@ -98,7 +116,7 @@
 
     <!--About Section-->
     <section class="about__div">
-      <div class="container about">
+      <div class="container display__flex about">
 
         <!--Left side of About Section-->
         <div class="about__div--left">
@@ -111,10 +129,10 @@
               <p>Call Us Anytime</p>
             </div>
           </div>
-          <a href="#"><button>
+          <a href="#" class="btn__primary about__btn">
             Get Free Estimate
             <div><img src="./images/Vector.svg" alt="none"></div>
-          </button></a>
+          </a>
         </div>
 
         <!--Right side of About Section-->
@@ -131,7 +149,7 @@
         <div class="testimonial__div--heading">
           <h2>What the People Thinks About Us</h2>
         </div>
-        <div class="card">
+        <div class="responsive card display__flex">
 
             <!--card 1-->
             <div class="testimonial__div--card">
@@ -146,7 +164,7 @@
             </div>
 
             <!--card 2-->
-            <div class="testimonial__div--card">
+            <div class="testimonial__div--card margin__cards">
               <div class="info">
                 <div><img src="./images/test_image2.jpg" alt="none"></div>
                 <div>
@@ -175,7 +193,7 @@
 
     <!--logos section-->
     <section class="logo__div">
-      <div class="container logo">
+      <div class="container display__flex logo">
         <img src="./images/logo1.jpg" alt="none">
         <img src="./images/02.jpg" alt="none">
         <img src="./images/03.jpg" alt="none">
@@ -188,21 +206,21 @@
     <section class="project__div">
       <div class="container project">
         <div class="project__div--heading">
-          <h2>Follow Our Projects</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of page lookings at its layouts points.</p>
+          <h2 class="heading">Follow Our Projects</h2>
+          <p class="para">It is a long established fact that a reader will be distracted by the readable content of page lookings at its layouts points.</p>
         </div>
-        <div class="project__div--container space">
+        <div class="project__div--container display__flex space">
 
           <!--First Project-->
           <div class="project__div--content">
             <img src="./images/Project1.png" alt="none" class="project__image--one">
             <div class="project__content">
               <div class="project__content--left">
-                <h2>Modern Kitchen</h2>
-                <p>Decor / Architecture</p>
+                <a href="#" class="project__link--primary">Modern Kitchen</a><br>
+                <a href="#" class="project__link--secondary">Decor / Architecture</a>
               </div>
               <div class="project__content--right">
-                <img src="./images/arrow.svg" alt="none">
+                <a href="#"><img src="./images/arrow.svg" alt="none"></a>
               </div>
             </div>
           </div>
@@ -212,28 +230,28 @@
             <img src="./images/Project2.png" alt="none" class="project__image--two">
             <div class="project__content">
               <div class="project__content--left">
-                <h2>Modern Kitchen</h2>
-                <p>Decor / Architecture</p>
+                <a href="#" class="project__link--primary">Modern Kitchen</a><br>
+                <a href="#" class="project__link--secondary">Decor / Architecture</a>
               </div>
               <div class="project__content--right">
-                <img src="./images/arrow.svg" alt="none">
+                <a href="#"><img src="./images/arrow.svg" alt="none"></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="project__div--container">
+        <div class="project__div--container display__flex">
 
           <!--Third Project-->
           <div class="project__div--content">
             <img src="./images/Project3.png" alt="none" class="project__image--three">
             <div class="project__content">
               <div class="project__content--left">
-                <h2>Modern Kitchen</h2>
-                <p>Decor / Architecture</p>
+                <a href="#" class="project__link--primary">Modern Kitchen</a><br>
+                <a href="#" class="project__link--secondary">Decor / Architecture</a>
               </div>
               <div class="project__content--right">
-                <img src="./images/arrow.svg" alt="none">
+                <a href="#"><img src="./images/arrow.svg" alt="none"></a>
               </div>
             </div>
           </div>
@@ -243,11 +261,11 @@
             <img src="./images/Project4.png" alt="none" class="project__image--four">
             <div class="project__content">
               <div class="project__content--left">
-                <h2>Modern Kitchen</h2>
-                <p>Decor / Architecture</p>
+                <a href="#" class="project__link--primary">Modern Kitchen</a><br>
+                <a href="#" class="project__link--secondary">Decor / Architecture</a>
               </div>
               <div class="project__content--right">
-                <img src="./images/arrow.svg" alt="none">
+                <a href="#"><img src="./images/arrow.svg" alt="none"></a>
               </div>
             </div>
           </div>
@@ -258,7 +276,7 @@
 
     <!--Counter section starts-->
     <section class="counter__div">
-      <div class="container counter">
+      <div class="container display__flex counter">
         <div class="counter__div--content border__counter">
           <h2>12</h2>
           <p>Years Of Experience</p>
@@ -278,14 +296,14 @@
       </div>
     </section>
     <!--blog section started-->
-    <section class="blog__div project__div work__div">
+    <section class="div__blog">
       <div class="container">
-        <div class="project__div--heading blog__div--heading">
-          <h2>Articles & News</h2>
-          <p>It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
+        <div class="blog__div--heading">
+          <h2 class="heading">Articles & News</h2>
+          <p class="para">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
         </div>
         <!--div which contains all the cards-->
-        <div class="div__blog--content row">
+        <div class="div__blog--content display__flex">
 
           <!--card 1-->
           <div class="div__blog--card">
@@ -303,7 +321,7 @@
                     <p>26 December,2022</p>
                   </div>
                   <div>
-                    <img src="./images/article_arrow1.svg" alt="none">
+                    <a href="#"><img src="./images/article_arrow1.svg" alt="none"></a>
                   </div>
                 
               </div>
@@ -326,7 +344,7 @@
                     <p>22 December,2022</p>
                   </div>
                   <div>
-                    <img src="./images/article_arrow2.svg" alt="none">
+                    <a href="#"><img src="./images/article_arrow2.svg" alt="none"></a>
                   </div>
                
               </div>
@@ -349,7 +367,7 @@
                     <p>25 December,2022</p>
                   </div>
                   <div>
-                    <img src="./images/article_arrow1.svg" alt="none">
+                    <a href="#"><img src="./images/article_arrow1.svg" alt="none"></a>
                   </div>
                 
               </div>
@@ -365,13 +383,14 @@
       <div class="container contact">
         <h2>Wanna join the interno?</h2>
         <p>It is a long established fact will be distracted</p>  
-        <a href="#"><button>Contact With Us <div><img src="./images/vector_black.svg" alt="none"></div></button></a>
+        <a href="#" class="btn__primary contact_btn">Contact With Us <div><img src="./images/vector_black.svg" alt="none"></div></a>
       </div>
     </section>
 
     <!--Footer-->
     <footer>
-      <div class="container foot">
+      <div class="container ">
+        <div class="foot">
         <div class="footer__one">
           <div class="left-nav">
             <div class="left-inside-nav">
@@ -416,10 +435,15 @@
           <p>contact@interno.com</p>
           <p>(123) 456 - 7890</p>
         </div>
-
+        </div>
+        <div class="copyright">
+          <p class="para">Copyright © Interno | Designed by Victorflow Templates - Powered by Webflow</p>
+        </div>
       </div>
 
     </footer>
+    
+      
 
   </main>
 </body>
