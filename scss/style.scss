@@ -255,7 +255,6 @@ h2 {
     background-color: $sand-color;
     padding: 88px 0px;
     border-radius: 100px;
-    background-color: pink;
 
     .responsive{
       .slick-dots{
@@ -509,10 +508,7 @@ h2 {
     }
 
     h2 {
-      // color: $menu-color;
-      // font-family: DM_Serif_Display;
       font-size: 25px;
-      // font-weight: 400;
       letter-spacing: 0.25px;
     }
 
@@ -726,7 +722,7 @@ footer {
   .container {
     max-width: 720px;
     margin: 0 auto;
-    background-color: pink;
+    // background-color: pink;
   }
 
   h2 {
@@ -945,7 +941,6 @@ footer {
 //mobile design
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
-    background-color: blue;
     max-width: 540px;
     margin: 0 auto;
 
@@ -1094,7 +1089,6 @@ footer {
 
 @media only screen and (max-width: 576px) {
   .container {
-    background-color: green;
     max-width: 100%;
     margin: 0 auto;
 

@@ -291,7 +291,6 @@ h2 {
   background-color: #F4F0EC;
   padding: 88px 0px;
   border-radius: 100px;
-  background-color: pink;
 }
 .testimonial__div .test .responsive .slick-dots li button::before {
   font-size: 50px;
@@ -604,7 +603,6 @@ footer .copyright {
   .container {
     max-width: 720px;
     margin: 0 auto;
-    background-color: pink;
   }
   h2 {
     font-size: 24px;
@@ -735,7 +733,6 @@ footer .copyright {
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
-    background-color: blue;
     max-width: 540px;
     margin: 0 auto;
   }
@@ -822,7 +819,6 @@ footer .copyright {
 }
 @media only screen and (max-width: 576px) {
   .container {
-    background-color: green;
     max-width: 100%;
     margin: 0 auto;
   }
