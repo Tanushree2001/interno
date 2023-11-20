@@ -1,7 +1,6 @@
 @use "./general" as *;
 @use "./variable" as *;
 @use "./typography";
-// @use "./media";
 
 nav {
   width: 100%;
@@ -134,7 +133,7 @@ h2 {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      max-width: 35%;
+      max-width: 34%;
 
       h2 {
         font-size: 84px;
