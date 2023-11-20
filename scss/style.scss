@@ -2,17 +2,75 @@
 @use "./variable" as *;
 @use "./typography";
 
+.toggle-button{
+  width: 50px;
+  height: 40px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  // background-color: pink;
+}
+.check-box {
+  transform: scale(2);  
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  /* position: fixed; */
+  top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%); 
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"] {
+  position: sticky;
+  appearance: none;
+  width: 80%;
+  height: 50%;
+  background-color: #ccc;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+  background: #7da6ff;
+}
+
+input[type="checkbox"]::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+input:checked[type="checkbox"]::after {
+  left: 50%;
+}
+
+// navbar style starts here 
 nav {
   width: 100%;
   background-color: $white-color;
 }
 
+//container which contains the max-width of the website.
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+//common properties for all the paragraph tags
 p {
   color: $brown-color;
   font-family: Jost;
@@ -21,6 +79,7 @@ p {
   letter-spacing: 0.22px;
 }
 
+// common properties for all the h2 tags 
 h2 {
   color: $menu-color;
   font-family: DM_Serif_Display;
@@ -36,6 +95,7 @@ h2 {
   padding: 43px 0;
 }
 
+// common property for all the buttons.  
 .btn__primary {
   display: inline-flex;
   gap: 10px;
@@ -47,6 +107,7 @@ h2 {
   cursor: pointer;
 }
 
+// left side of navbar 
 .left-nav {
   display: flex;
   align-items: center;
@@ -60,6 +121,7 @@ h2 {
   }
 }
 
+// right side of the navbar 
 .right-nav {
   display: flex;
   align-items: center;
@@ -78,12 +140,14 @@ h2 {
   }
 }
 
+// dropdown menu icon 
 .bar__icon{
   width: 2.5rem;
   cursor: pointer;
   display: none;
 }
 
+//dropdown menu style starts here
 .dropdown__menu{
   display: none;
   position: absolute;
@@ -92,7 +156,6 @@ h2 {
   top: 90px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
-  // background-color: $menu-color;
   backdrop-filter: blur(15px);
   z-index: 2;
   border-radius: 10px;
@@ -114,11 +177,12 @@ h2 {
   height: 300px;
 }
 
+//common property wherever flex is used.
 .display__flex {
   display: flex;
 }
 
-// banner section 
+// banner section design starts here.
 .banner__div {
   position: relative;
 
@@ -129,6 +193,7 @@ h2 {
   }
 
   .container {
+    // content inside the banner section 
     .banner__div--content {
       position: absolute;
       top: 50%;
@@ -156,9 +221,11 @@ h2 {
   }
 }
 
+// work section design starts here. 
 .work__div {
   margin: 200px 0;
 
+  //cards inside the work section.
   .work__div--container {
     margin: 0 21px;
     text-align: center;
@@ -179,7 +246,7 @@ h2 {
   }
 }
 
-// about section starts 
+// about section design starts here.
 .about__div {
   .about {
     justify-content: space-between;
@@ -245,7 +312,7 @@ h2 {
   }
 }
 
-// testimonial section 
+// testimonial section design starts here.
 .testimonial__div {
   margin-top: 200px;
 
@@ -277,9 +344,6 @@ h2 {
 
     // div which contains all the cards inside it 
     .card {
-      // padding: 0 24px;
-      gap: 20px;
-
       .slick-track{
         display: flex;
         gap: 20px;
@@ -299,7 +363,6 @@ h2 {
         .info {
           display: flex;
           margin-bottom: 39px;
-          // gap: 25px;
           gap: 20px;
           align-items: center;
 
@@ -325,7 +388,7 @@ h2 {
   }
 }
 
-// section of logos of brands 
+// logos of brands section design starts here. 
 .logo__div {
   margin-top: 150px;
 
@@ -337,7 +400,7 @@ h2 {
   }
 }
 
-//project section started
+//project section design starts here
 .project__div {
   margin-top: 150px;
 
@@ -416,19 +479,22 @@ h2 {
   }
 }
 
-// counter section starts 
+// counter section design starts here
 .counter__div {
   margin-top: 150px;
   background-color: $sand-color;
 
+  //container inside counter section.
   .counter {
     padding: 150px 0;
     justify-content: space-around;
 
+    //divs in which border is needed. 
     .border__counter {
       border-right: 1px solid $light-brown;
     }
 
+    //all the divs which contains content.
     .counter__div--content {
       position: relative;
       padding-right: 70px;
@@ -439,15 +505,15 @@ h2 {
         text-align: center;
         letter-spacing: 1.7px;
       }
-
     }
   }
 }
 
-// blog section start 
+// blog section design starts here. 
 .div__blog {
   margin: 200px 0;
 
+  // div which contains heading and some content
   .blog__div--heading {
     padding: 0 190px 52px;
 
@@ -460,10 +526,12 @@ h2 {
     }
   }
 
+  //div contains all the cards.
   .div__blog--content {
     gap: 27px;
   }
 
+  //card starts here.
   .div__blog--card {
     padding: 21px;
     border-radius: 62px;
@@ -471,13 +539,14 @@ h2 {
     border: 1px solid $border-color;
     position: relative;
 
+    // image inside the card 
     .card__image {
-
       img {
         border-radius: 45px 45px 0 0;
       }
     }
 
+    //the tag of the card which is above image
     .card__tag {
       position: absolute;
       top: 50%;
@@ -489,7 +558,8 @@ h2 {
       background-color: $white-color;
       left: 40px;
     }
-
+    
+    //content of the card.
     .card__content {
       padding: 21px 0;
 
@@ -510,17 +580,18 @@ h2 {
       font-size: 25px;
       letter-spacing: 0.25px;
     }
-
   }
 
+  //this card contains different color 
   .margin__card {
-    // margin: 0 27px;
     background-color: $sand-color;
   }
 }
 
-//contact section started
+//contact section design starts here
 .contact__div {
+
+  //container inside the contact section.
   .contact {
     background-color: $menu-color;
     padding: 80px 0;
@@ -551,14 +622,16 @@ h2 {
 }
 
 
-//footer starts
+//footer design starts here.
 footer {
   margin-top: 135px;
 
+  // container inside the footer 
   .foot {
     display: flex;
     justify-content: space-between;
 
+    // first column of the footer 
     .footer__one {
       p {
         width: 393px;
@@ -577,6 +650,7 @@ footer {
       width: 258px;
     }
 
+    // second, third and fourth column design of the footer.
     .footer__two {
       h2 {
         font-size: 25px;
@@ -599,10 +673,10 @@ footer {
       p {
         padding: 18px 0;
       }
-
     }
   }
 
+  // copyright message at the bottom 
   .copyright {
     margin-top: 134px;
     text-align: center;
@@ -611,13 +685,14 @@ footer {
   }
 }
 
-//large desktop screen
+//large desktop screen design starts here
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .container {
     max-width: 1140px;
     margin: 0 auto;
   }
 
+  // banner section starts here
   .banner__div {
     img {
       border-radius: 0px 0px 0px 200px;
@@ -629,15 +704,19 @@ footer {
       }
     }
   }
+  // banner section ends here. 
 }
 
-//small desktop design.
+//small desktop design starts here.
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  
+  //container size of small desktop
   .container {
     max-width: 960px;
     margin: 0 auto;
   }
 
+  // banner section starts here
   .banner__div {
     img {
       border-radius: 0px 0px 0px 140px;
@@ -649,7 +728,9 @@ footer {
       }
     }
   }
+  // banner section ends here 
 
+  // about section starts here
   .about__div {
     .about {
       gap: 75px;
@@ -669,6 +750,7 @@ footer {
     }
   }
 
+  // testimonial section starts here 
   .testimonial__div {
     .test {
       .testimonial__div--heading {
@@ -688,6 +770,7 @@ footer {
     }
   }
 
+  // project section starts here
   .project__div {
     .project {
       .project__div--heading {
@@ -700,6 +783,16 @@ footer {
     }
   }
 
+  // counter section starts here
+  .counter__div{
+    .counter{
+      .counter__div--content{
+        padding-right: 40px;
+      }
+    }
+  }
+
+  // blog section starts here
   .div__blog {
     .blog__div--heading {
       padding: 0 66px 52px;
@@ -716,12 +809,11 @@ footer {
 
 }
 
-// For tablets
+// Tablet design starts here
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     max-width: 720px;
-    margin: 0 auto;
-    // background-color: pink;
+    // margin: 0 auto;
   }
 
   h2 {
@@ -736,6 +828,7 @@ footer {
     font-size: 12px;
   }
 
+  // navbar starts here
   nav {
     .right-nav {
       gap: 20px;
@@ -746,6 +839,7 @@ footer {
     }
   }
 
+  // banner section starts here
   .banner__div {
     img {
       border-radius: 0px 0px 0px 150px;
@@ -772,6 +866,7 @@ footer {
     }
   }
 
+  // work section starts here
   .work__div {
     .display__flex {
       padding: 0px;
@@ -785,6 +880,7 @@ footer {
     }
   }
 
+  // about section starts here
   .about__div {
     .about {
       .about__div--left {
@@ -825,6 +921,7 @@ footer {
     }
   }
 
+  // testimonial section starts here
   .testimonial__div{
     .test{
       .testimonial__div--heading{
@@ -838,6 +935,7 @@ footer {
     }
   }
 
+  // logo section starts here
   .logo__div {
     .logo {
       flex-wrap: wrap;
@@ -846,6 +944,7 @@ footer {
     }
   }
 
+  // project section starts here
   .project__div {
     .project {
       .project__div--heading{
@@ -873,6 +972,7 @@ footer {
     }
   }
 
+  // counter section starts here
   .counter__div {
     .counter {
       .counter__div--content {
@@ -885,6 +985,7 @@ footer {
     }
   }
 
+  // blog section starts here
   .div__blog {
     .div__blog--content {
       flex-wrap: wrap;
@@ -899,6 +1000,7 @@ footer {
     }
   }
 
+  // contact section starts here
   .contact__div {
     .contact {
       .contact_btn {
@@ -908,6 +1010,7 @@ footer {
     }
   }
 
+  // footer starts here
   footer {
     .foot {
       .footer__one {
@@ -937,12 +1040,11 @@ footer {
   }
 }
 
-//mobile design
+//mobile design starts here 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
     max-width: 540px;
     margin: 0 auto;
-
   }
 
   .display__flex {
@@ -951,6 +1053,7 @@ footer {
     align-items: center;
   }
 
+  // header starts here 
   header {
     nav{
       .right-nav{
@@ -965,6 +1068,7 @@ footer {
     }
   }
 
+  // banner section design starts here  
   .banner__div {
     img {
       border-radius: 0px 0px 0px 40px;
@@ -995,12 +1099,14 @@ footer {
     }
   }
 
+  // work section design starts here 
   .work__div {
     .display__flex {
       gap: 21px;
     }
   }
 
+  // about section design starts here 
   .about__div {
     .about {
       .about__div--left {
@@ -1014,7 +1120,8 @@ footer {
       }
     }
   }
-
+  
+  // testimonial section design starts here.
   .testimonial__div {
     .test {
       .testimonial__div--heading {
@@ -1028,12 +1135,14 @@ footer {
     }
   }
 
+  // logo section design starts here. 
   .logo__div {
     .logo {
       gap: 50px;
     }
   }
 
+  // project section design starts here 
   .project__div {
     .project {
       .project__div--heading {
@@ -1042,6 +1151,7 @@ footer {
     }
   }
 
+  // counter section design starts here. 
   .counter__div{
     .counter{ 
       padding: 0;
@@ -1054,6 +1164,8 @@ footer {
       }
     }
   }
+
+  // blog section design starts here. 
   .div__blog {
     .blog__div--heading {
       padding: 0;
@@ -1073,12 +1185,15 @@ footer {
       }
     }
   }
+
+  //contact section design starts here.
   .contact__div{
     .contact{
       text-align: center;
     }
   }
 
+  //footer design starts here.
   footer {
     .foot{
       flex-wrap: wrap;
@@ -1086,9 +1201,11 @@ footer {
   }
 }
 
+//small mobile screens
 @media only screen and (max-width: 576px) {
   .container {
-    max-width: 100%;
+    // max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 
   }
@@ -1099,6 +1216,7 @@ footer {
     align-items: center;
   }
 
+  // header starts here 
   header {
     nav{
       .right-nav{
@@ -1113,6 +1231,7 @@ footer {
     }
   }
 
+  // banner section starts here 
   .banner__div {
     img {
       border-radius: 0px 0px 0px 40px;
@@ -1143,12 +1262,14 @@ footer {
     }
   }
 
+  // work section 
   .work__div {
     .display__flex {
       gap: 21px;
     }
   }
 
+  // about section 
   .about__div {
     .about {
       .about__div--left {
@@ -1163,7 +1284,9 @@ footer {
     }
   }
 
+  // testimonial section 
   .testimonial__div {
+    overflow-x: hidden;
     .test {
       .testimonial__div--heading {
         padding: 0;
@@ -1175,12 +1298,15 @@ footer {
       }
     }
   }
+
+  // logos section
   .logo__div {
     .logo {
       gap: 50px;
     }
   }
 
+  //project section 
   .project__div {
     .project {
       .project__div--heading {
@@ -1189,6 +1315,7 @@ footer {
     }
   }
 
+  //counter section 
   .counter__div{
     .counter{ 
       padding: 0;
@@ -1201,11 +1328,12 @@ footer {
       }
     }
   }
+
+  //blog section
   .div__blog {
     .blog__div--heading {
       padding: 0;
     }
-
     .div__blog--content {
       .div__blog--card {
         .card__image {
@@ -1221,12 +1349,14 @@ footer {
     }    
   }
 
+  //contact section
   .contact__div{
     .contact{
       text-align: center;
     }
   }
 
+  //footer
   footer {
     .foot{
       flex-wrap: wrap;

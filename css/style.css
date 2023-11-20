@@ -77,6 +77,62 @@ a {
   font-family: DM_Serif_Display;
   src: url(../vendor/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
 }
+.toggle-button {
+  width: 50px;
+  height: 40px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.check-box {
+  transform: scale(2);
+}
+
+[type=checkbox]:not(:checked),
+[type=checkbox]:checked {
+  /* position: fixed; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type=checkbox] {
+  position: sticky;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 80%;
+  height: 50%;
+  background-color: #ccc;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input:checked[type=checkbox] {
+  background: #7da6ff;
+}
+
+input[type=checkbox]::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+input:checked[type=checkbox]::after {
+  left: 50%;
+}
+
 nav {
   width: 100%;
   background-color: #ffffff;
@@ -301,9 +357,6 @@ h2 {
 }
 .testimonial__div .test .testimonial__div--heading h2 {
   text-align: center;
-}
-.testimonial__div .test .card {
-  gap: 20px;
 }
 .testimonial__div .test .card .slick-track {
   display: flex;
@@ -592,6 +645,9 @@ footer .copyright {
   .project__div .project .project__div--container {
     gap: 80px;
   }
+  .counter__div .counter .counter__div--content {
+    padding-right: 40px;
+  }
   .div__blog .blog__div--heading {
     padding: 0 66px 52px;
   }
@@ -602,7 +658,6 @@ footer .copyright {
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     max-width: 720px;
-    margin: 0 auto;
   }
   h2 {
     font-size: 24px;
@@ -819,7 +874,7 @@ footer .copyright {
 }
 @media only screen and (max-width: 576px) {
   .container {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
   }
   .display__flex {
@@ -863,6 +918,9 @@ footer .copyright {
   }
   .about__div .about .about__div--right img {
     border-radius: 0px 126.5px 0px 50px;
+  }
+  .testimonial__div {
+    overflow-x: hidden;
   }
   .testimonial__div .test .testimonial__div--heading {
     padding: 0;
