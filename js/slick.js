@@ -4,6 +4,7 @@ $(".responsive").slick({
   infinite: false,
   speed: 300,
   slidesToShow: 3,
+  autoplay: true,
   // slidesToScroll: 3,
   adaptiveHeight: true,
   responsive: [

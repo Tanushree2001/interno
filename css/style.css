@@ -48,6 +48,7 @@ img,
 picture, svg {
   max-width: 100%;
   display: block;
+  height: 100%;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -77,14 +78,6 @@ a {
   font-family: DM_Serif_Display;
   src: url(../vendor/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
 }
-@font-face {
-  font-family: slick1;
-  src: url(../vendor/fonts/slick.ttf);
-}
-@font-face {
-  font-family: slick2;
-  src: url(../vendor/fonts/slick.woff);
-}
 nav {
   width: 100%;
   background-color: #ffffff;
@@ -110,6 +103,14 @@ h2 {
   font-size: 50px;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.scale {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.scale:hover {
+  transform: scale(1.1);
 }
 
 .flexprop {
@@ -301,7 +302,7 @@ h2 {
   border-radius: 100px;
 }
 .testimonial__div .test .responsive .slick-dots li button::before {
-  font-size: 50px;
+  font-size: 12px;
 }
 .testimonial__div .test .testimonial__div--heading {
   padding: 0 300px;
@@ -363,7 +364,7 @@ h2 {
   text-align: center;
 }
 .project__div .space {
-  margin-bottom: 56px;
+  margin-bottom: 130px;
 }
 .project__div .project__div--container {
   display: flex;
@@ -652,6 +653,12 @@ footer .copyright {
     width: calc(50% - 42px);
     padding: 0 58px;
   }
+  .about__div .about {
+    gap: 75px;
+  }
+  .about__div .about .about__div--left {
+    width: 50%;
+  }
   .about__div .about .about__div--left .about__div--icon {
     align-items: center;
   }
@@ -671,6 +678,9 @@ footer .copyright {
   .about__div .about .about__div--left .about__btn {
     padding: 13px 15px;
     border-radius: 9px;
+  }
+  .about__div .about .about__div--right {
+    width: 50%;
   }
   .about__div .about .about__div--right img {
     border-radius: 0px 163.5px 0px 61.5px;

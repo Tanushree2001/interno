@@ -2,61 +2,6 @@
 @use "./variable" as *;
 @use "./typography";
 
-// .toggle-button{
-//   width: 50px;
-//   height: 40px;
-//   position: fixed;
-//   right: 0;
-//   top: 0;
-//   z-index: 10;
-//   // background-color: pink;
-// }
-// .check-box {
-//   transform: scale(2);  
-// }
-
-// [type="checkbox"]:not(:checked),
-// [type="checkbox"]:checked {
-//   /* position: fixed; */
-//   top: 50%;
-//   // left: 50%;
-//   // transform: translate(-50%, -50%); 
-//   transform: translateY(-50%);
-// }
-
-// input[type="checkbox"] {
-//   position: sticky;
-//   appearance: none;
-//   width: 80%;
-//   height: 50%;
-//   background-color: #ccc;
-//   border-radius: 50px;
-//   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-//   cursor: pointer;
-//   transition: 0.4s;
-// }
-
-// input:checked[type="checkbox"] {
-//   background: #7da6ff;
-// }
-
-// input[type="checkbox"]::after {
-//   position: absolute;
-//   content: "";
-//   width: 50%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   background: #fff;
-//   border-radius: 50%;
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-//   transform: scale(1.1);
-//   transition: 0.4s;
-// }
-// input:checked[type="checkbox"]::after {
-//   left: 50%;
-// }
-
 // navbar style starts here 
 nav {
   width: 100%;
@@ -88,6 +33,14 @@ h2 {
   letter-spacing: 1px;
 }
 
+.scale{
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 .flexprop {
   display: flex;
   justify-content: space-between;
@@ -141,14 +94,14 @@ h2 {
 }
 
 // dropdown menu icon 
-.bar__icon{
+.bar__icon {
   width: 2.5rem;
   cursor: pointer;
   display: none;
 }
 
 //dropdown menu style starts here
-.dropdown__menu{
+.dropdown__menu {
   display: none;
   position: absolute;
   right: 0;
@@ -162,18 +115,19 @@ h2 {
   overflow: hidden;
   transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  li{
+  li {
     padding: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    a{
+    a {
       color: $menu-color;
     }
   }
 }
-.open{
+
+.open {
   height: 300px;
 }
 
@@ -190,9 +144,12 @@ h2 {
     width: 100%;
     height: auto;
     border-radius: 0px 0px 0px 291px;
+    // width: 1521px;
+    // height: auto;
   }
 
   .container {
+
     // content inside the banner section 
     .banner__div--content {
       position: absolute;
@@ -322,11 +279,11 @@ h2 {
     padding: 88px 0px;
     border-radius: 100px;
 
-    .responsive{
-      .slick-dots{
-        li{
-          button::before{
-            font-size: 50px;
+    .responsive {
+      .slick-dots {
+        li {
+          button::before {
+            font-size: 12px;
           }
         }
       }
@@ -344,7 +301,7 @@ h2 {
 
     // div which contains all the cards inside it 
     .card {
-      .slick-track{
+      .slick-track {
         display: flex;
         gap: 20px;
         // padding: 0 4px;
@@ -419,7 +376,7 @@ h2 {
 
   // class which contains cards 
   .space {
-    margin-bottom: 56px;
+    margin-bottom: 130px;
   }
 
   //div which contains project card
@@ -429,6 +386,7 @@ h2 {
 
     //div of card
     .project__div--content {
+     
 
       //image of project card one 
       .project__image--one {
@@ -558,7 +516,7 @@ h2 {
       background-color: $white-color;
       left: 40px;
     }
-    
+
     //content of the card.
     .card__content {
       padding: 21px 0;
@@ -704,12 +662,13 @@ footer {
       }
     }
   }
+
   // banner section ends here. 
 }
 
 //small desktop design starts here.
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  
+
   //container size of small desktop
   .container {
     max-width: 960px;
@@ -728,6 +687,7 @@ footer {
       }
     }
   }
+
   // banner section ends here 
 
   // about section starts here
@@ -784,9 +744,9 @@ footer {
   }
 
   // counter section starts here
-  .counter__div{
-    .counter{
-      .counter__div--content{
+  .counter__div {
+    .counter {
+      .counter__div--content {
         padding-right: 40px;
       }
     }
@@ -883,7 +843,10 @@ footer {
   // about section starts here
   .about__div {
     .about {
+      gap: 75px;
       .about__div--left {
+        width: 50%;
+
         .about__div--icon {
           align-items: center;
 
@@ -914,6 +877,7 @@ footer {
       }
 
       .about__div--right {
+        width: 50%;
         img {
           border-radius: 0px 163.5px 0px 61.5px;
         }
@@ -922,13 +886,14 @@ footer {
   }
 
   // testimonial section starts here
-  .testimonial__div{
-    .test{
-      .testimonial__div--heading{
+  .testimonial__div {
+    .test {
+      .testimonial__div--heading {
         padding: 0px 210px;
       }
-      .card{
-        .testimonial__div--card{
+
+      .card {
+        .testimonial__div--card {
           height: 250px;
         }
       }
@@ -947,22 +912,26 @@ footer {
   // project section starts here
   .project__div {
     .project {
-      .project__div--heading{
+      .project__div--heading {
         padding: 0px 160px 93px;
       }
+
       .project__div--container {
         gap: 20px;
-        .project__div--content{
-          .project__content{
-            .project__content--left{
-              .project__link--primary{
+
+        .project__div--content {
+          .project__content {
+            .project__content--left {
+              .project__link--primary {
                 font-size: 16px;
               }
-              .project__link--secondary{
+
+              .project__link--secondary {
                 font-size: 12px;
               }
             }
-            .project__content--right{
+
+            .project__content--right {
               width: 35px;
               height: auto;
             }
@@ -978,7 +947,7 @@ footer {
       .counter__div--content {
         padding-right: 42px;
 
-        h2{
+        h2 {
           font-size: 48px;
         }
       }
@@ -993,7 +962,8 @@ footer {
 
       .div__blog--card {
         width: calc(50% - 13.5px);
-        .card__tag{
+
+        .card__tag {
           top: 45%;
         }
       }
@@ -1055,14 +1025,16 @@ footer {
 
   // header starts here 
   header {
-    nav{
-      .right-nav{
+    nav {
+      .right-nav {
         display: none;
       }
-      .bar__icon{
+
+      .bar__icon {
         display: block;
       }
-      .dropdown__menu{
+
+      .dropdown__menu {
         display: block;
       }
     }
@@ -1120,15 +1092,16 @@ footer {
       }
     }
   }
-  
+
   // testimonial section design starts here.
   .testimonial__div {
     .test {
       .testimonial__div--heading {
         padding: 0;
       }
-      .card{
-        .testimonial__div--card{
+
+      .card {
+        .testimonial__div--card {
           height: 300px;
         }
       }
@@ -1152,14 +1125,16 @@ footer {
   }
 
   // counter section design starts here. 
-  .counter__div{
-    .counter{ 
+  .counter__div {
+    .counter {
       padding: 0;
       gap: 20px;
-      .border__counter{
+
+      .border__counter {
         border: none
       }
-      .counter__div--content{
+
+      .counter__div--content {
         padding: 0;
       }
     }
@@ -1179,6 +1154,7 @@ footer {
             height: auto;
           }
         }
+
         .card__tag {
           top: 55%;
         }
@@ -1187,15 +1163,15 @@ footer {
   }
 
   //contact section design starts here.
-  .contact__div{
-    .contact{
+  .contact__div {
+    .contact {
       text-align: center;
     }
   }
 
   //footer design starts here.
   footer {
-    .foot{
+    .foot {
       flex-wrap: wrap;
     }
   }
@@ -1218,14 +1194,16 @@ footer {
 
   // header starts here 
   header {
-    nav{
-      .right-nav{
+    nav {
+      .right-nav {
         display: none;
       }
-      .bar__icon{
+
+      .bar__icon {
         display: block;
       }
-      .dropdown__menu{
+
+      .dropdown__menu {
         display: block;
       }
     }
@@ -1287,12 +1265,14 @@ footer {
   // testimonial section 
   .testimonial__div {
     overflow-x: hidden;
+
     .test {
       .testimonial__div--heading {
         padding: 0;
       }
-      .card{
-        .testimonial__div--card{
+
+      .card {
+        .testimonial__div--card {
           height: 300px;
         }
       }
@@ -1316,14 +1296,16 @@ footer {
   }
 
   //counter section 
-  .counter__div{
-    .counter{ 
+  .counter__div {
+    .counter {
       padding: 0;
       gap: 20px;
-      .border__counter{
+
+      .border__counter {
         border: none
       }
-      .counter__div--content{
+
+      .counter__div--content {
         padding: 0;
       }
     }
@@ -1334,6 +1316,7 @@ footer {
     .blog__div--heading {
       padding: 0;
     }
+
     .div__blog--content {
       .div__blog--card {
         .card__image {
@@ -1342,36 +1325,39 @@ footer {
             height: auto;
           }
         }
+
         .card__tag {
           top: 40%;
         }
       }
-    }    
+    }
   }
 
   //contact section
-  .contact__div{
-    .contact{
+  .contact__div {
+    .contact {
       text-align: center;
     }
   }
 
   //footer
   footer {
-    .foot{
+    .foot {
       flex-wrap: wrap;
       gap: 20px;
-      .footer__one{
+
+      .footer__one {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        p{
+        p {
           width: fit-content;
         }
       }
-      .fix__width{
+
+      .fix__width {
         text-align: center;
         width: fit-content;
       }
