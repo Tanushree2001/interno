@@ -2,60 +2,60 @@
 @use "./variable" as *;
 @use "./typography";
 
-.toggle-button{
-  width: 50px;
-  height: 40px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 10;
-  // background-color: pink;
-}
-.check-box {
-  transform: scale(2);  
-}
+// .toggle-button{
+//   width: 50px;
+//   height: 40px;
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   z-index: 10;
+//   // background-color: pink;
+// }
+// .check-box {
+//   transform: scale(2);  
+// }
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-  /* position: fixed; */
-  top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%); 
-  transform: translateY(-50%);
-}
+// [type="checkbox"]:not(:checked),
+// [type="checkbox"]:checked {
+//   /* position: fixed; */
+//   top: 50%;
+//   // left: 50%;
+//   // transform: translate(-50%, -50%); 
+//   transform: translateY(-50%);
+// }
 
-input[type="checkbox"] {
-  position: sticky;
-  appearance: none;
-  width: 80%;
-  height: 50%;
-  background-color: #ccc;
-  border-radius: 50px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: 0.4s;
-}
+// input[type="checkbox"] {
+//   position: sticky;
+//   appearance: none;
+//   width: 80%;
+//   height: 50%;
+//   background-color: #ccc;
+//   border-radius: 50px;
+//   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//   cursor: pointer;
+//   transition: 0.4s;
+// }
 
-input:checked[type="checkbox"] {
-  background: #7da6ff;
-}
+// input:checked[type="checkbox"] {
+//   background: #7da6ff;
+// }
 
-input[type="checkbox"]::after {
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  transition: 0.4s;
-}
-input:checked[type="checkbox"]::after {
-  left: 50%;
-}
+// input[type="checkbox"]::after {
+//   position: absolute;
+//   content: "";
+//   width: 50%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   background: #fff;
+//   border-radius: 50%;
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+//   transform: scale(1.1);
+//   transition: 0.4s;
+// }
+// input:checked[type="checkbox"]::after {
+//   left: 50%;
+// }
 
 // navbar style starts here 
 nav {
