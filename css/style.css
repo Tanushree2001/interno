@@ -789,7 +789,6 @@ footer .copyright {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
     max-width: 540px;
-    margin: 0 auto;
   }
   .display__flex {
     flex-direction: column;
@@ -875,7 +874,6 @@ footer .copyright {
 @media only screen and (max-width: 576px) {
   .container {
     width: 100%;
-    margin: 0 auto;
   }
   .display__flex {
     flex-direction: column;
