@@ -190,7 +190,7 @@ h2 {
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
 
   &.in-viewport {
     opacity: 1;
@@ -610,7 +610,7 @@ h2 {
 
 //footer design starts here.
 footer {
-  margin-top: 135px;
+  margin: 135px 0;
 
   // container inside the footer 
   .foot {
@@ -664,7 +664,7 @@ footer {
 
   // copyright message at the bottom 
   .copyright {
-    margin-top: 134px;
+    // margin-top: 134px;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 46px;
@@ -1101,6 +1101,7 @@ footer {
 
   // work section design starts here 
   .work__div {
+    margin: 100px 0;
     .display__flex {
       gap: 21px;
     }
@@ -1111,6 +1112,7 @@ footer {
     .about {
       .about__div--left {
         width: 100%;
+        padding: 0 0 30px 0;
       }
 
       .about__div--right {
@@ -1123,6 +1125,7 @@ footer {
 
   // testimonial section design starts here.
   .testimonial__div {
+    margin-top: 100px;
     .test {
       .testimonial__div--heading {
         padding: 0;
@@ -1138,6 +1141,7 @@ footer {
 
   // logo section design starts here. 
   .logo__div {
+    margin-top: 75px;
     .logo {
       gap: 50px;
     }
@@ -1145,6 +1149,7 @@ footer {
 
   // project section design starts here 
   .project__div {
+    margin-top: 75px;
     .project {
       .project__div--heading {
         padding: 0;
@@ -1154,6 +1159,7 @@ footer {
 
   // counter section design starts here. 
   .counter__div {
+    margin-top: 75px;
     .counter {
       padding: 0;
       gap: 20px;
@@ -1170,6 +1176,7 @@ footer {
 
   // blog section design starts here. 
   .div__blog {
+    margin: 100px 0;
     .blog__div--heading {
       padding: 0;
     }
@@ -1199,6 +1206,7 @@ footer {
 
   //footer design starts here.
   footer {
+    margin: 65px 0;
     .foot {
       flex-wrap: wrap;
     }
@@ -1270,6 +1278,7 @@ footer {
 
   // work section 
   .work__div {
+    margin: 100px 0;
     .display__flex {
       gap: 21px;
     }
@@ -1280,6 +1289,7 @@ footer {
     .about {
       .about__div--left {
         width: 100%;
+        padding: 0 0 30px 0;
       }
 
       .about__div--right {
@@ -1292,7 +1302,8 @@ footer {
 
   // testimonial section 
   .testimonial__div {
-    overflow-x: hidden;
+    margin-top: 100px;
+    // overflow-x: hidden;
 
     .test {
       .testimonial__div--heading {
@@ -1309,6 +1320,7 @@ footer {
 
   // logos section
   .logo__div {
+    margin-top: 75px;
     .logo {
       gap: 50px;
     }
@@ -1316,6 +1328,7 @@ footer {
 
   //project section 
   .project__div {
+    margin-top: 75px;
     .project {
       .project__div--heading {
         padding: 0;
@@ -1325,6 +1338,7 @@ footer {
 
   //counter section 
   .counter__div {
+    margin-top: 75px;
     .counter {
       padding: 0;
       gap: 20px;
@@ -1341,6 +1355,7 @@ footer {
 
   //blog section
   .div__blog {
+    margin: 100px 0;
     .blog__div--heading {
       padding: 0;
     }
@@ -1370,6 +1385,7 @@ footer {
 
   //footer
   footer {
+    margin: 65px 0;
     .foot {
       flex-wrap: wrap;
       gap: 20px;

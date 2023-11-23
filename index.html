@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/slick-theme.css">
   <link rel="stylesheet" href="./css/slick.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>-->
   <script src="./js/scroll-animation.js"></script>
@@ -92,10 +93,10 @@
     <!--Work section starts here-->
     <section class="work__div">
       <!--Content for max width-->
-      <div class="container display__flex fade-in-section">
+      <div class="container display__flex">
 
         <!--First content-->
-        <div class="work__div--container scale ">
+        <div data-aos="flip-right" class="work__div--container scale ">
           <h2>Project Plan</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button">
@@ -106,7 +107,7 @@
         </div>
 
         <!--Second Content-->
-        <div class="work__div--container scale ">
+        <div data-aos="flip-right" class="work__div--container scale ">
           <h2>Interior Work</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button">
@@ -117,7 +118,7 @@
         </div>
 
         <!--Third Content-->
-        <div class="work__div--container center scale ">
+        <div data-aos="flip-right" class="work__div--container center scale ">
           <h2>Realization</h2>
           <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
           <div class="work__button"> 
@@ -152,7 +153,7 @@
         </div>
 
         <!--Right side of About Section-->
-        <div class="about__div--right fade-in-section">
+        <div data-aos="flip-right" class="about__div--right">
           <img src="./images/about.WEBP" alt="none" width="653" height="603">
         </div>
 
@@ -228,8 +229,8 @@
         <div class="project__div--container display__flex space">
 
           <!--First Project-->
-          <div class="project__div--content scale">
-            <img src="./images/project1.WEBP" alt="none" class="project__image--one fade-in-section" width="548" height="525">
+          <div data-aos="fade-up-right" class="project__div--content scale">
+            <img src="./images/project1.WEBP" alt="none" class="project__image--one" width="548" height="525">
             <div class="project__content">
               <div class="project__content--left">
                 <a href="#" class="project__link--primary">Modern Kitchen</a><br>
@@ -242,8 +243,8 @@
           </div>
 
           <!--Second Project-->
-          <div class="project__div--content scale">
-            <img src="./images/project2.WEBP" alt="none" class="project__image--two fade-in-section" width="548" height="525">
+          <div scale data-aos="fade-up-left" class="project__div--content ">
+            <img src="./images/project2.WEBP" alt="none" class="project__image--two" width="548" height="525">
             <div class="project__content">
               <div class="project__content--left">
                 <a href="#" class="project__link--primary">Modern Kitchen</a><br>
@@ -259,8 +260,8 @@
         <div class="project__div--container display__flex ">
 
           <!--Third Project-->
-          <div class="project__div--content scale">
-            <img src="./images/project3.WEBP" alt="none" class="project__image--three fade-in-section" width="548" height="525">
+          <div data-aos="fade-up-right" class="project__div--content scale">
+            <img src="./images/project3.WEBP" alt="none" class="project__image--three" width="548" height="525">
             <div class="project__content">
               <div class="project__content--left">
                 <a href="#" class="project__link--primary">Modern Kitchen</a><br>
@@ -273,8 +274,8 @@
           </div>
 
           <!--Fourth Project-->
-          <div class="project__div--content scale">
-            <img src="./images/project4.WEBP" alt="none" class="project__image--four fade-in-section" width="548" height="525">
+          <div data-aos="fade-up-left" class="project__div--content scale ">
+            <img src="./images/project4.WEBP" alt="none" class="project__image--four" width="548" height="525">
             <div class="project__content">
               <div class="project__content--left">
                 <a href="#" class="project__link--primary">Modern Kitchen</a><br>
@@ -460,5 +461,9 @@
     </footer>
     <!--footer ends here-->  
   </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

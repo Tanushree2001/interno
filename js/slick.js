@@ -5,6 +5,7 @@ $(".responsive").slick({
   speed: 300,
   slidesToShow: 3,
   autoplay: true,
+  arrows: false,
   // slidesToScroll: 3,
   adaptiveHeight: true,
   responsive: [
