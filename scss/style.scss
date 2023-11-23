@@ -156,6 +156,8 @@ h2 {
       top: 50%;
       transform: translateY(-50%);
       max-width: 34%;
+      animation: fadeIn 2s ease-in-out; /*animation applied*/
+      // animation-iteration-count: infinite;
 
       h2 {
         font-size: 84px;
@@ -177,7 +179,24 @@ h2 {
     }
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 
+  &.in-viewport {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 // work section design starts here. 
 .work__div {
   margin: 200px 0;
@@ -189,6 +208,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // opacity: 0;
+    // transform: translateY(20px);
+    // transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    // iteration-count: infinite;
 
     h2 {
       font-size: 25px;
@@ -200,6 +223,11 @@ h2 {
       color: $brown-color;
       background-color: $white-color;
     }
+
+    // &.in-viewport {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    // }
   }
 }
 
