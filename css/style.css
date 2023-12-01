@@ -168,11 +168,13 @@ h2 {
 .dropdown__menu {
   display: none;
   position: absolute;
-  right: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 0;
-  top: 90px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
+  background-color: #292F36;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 2;
@@ -188,6 +190,7 @@ h2 {
 }
 .dropdown__menu li a {
   color: #292F36;
+  color: #ffffff;
 }
 
 .open {
@@ -590,6 +593,9 @@ footer .copyright {
   .banner__div .container .banner__div--content {
     max-width: 55%;
   }
+  .work__div {
+    margin: 80px 0;
+  }
   .about__div .about {
     gap: 75px;
   }
@@ -603,21 +609,49 @@ footer .copyright {
     height: 100%;
     border-radius: 0px 245.5px 0px 123px;
   }
+  .testimonial__div {
+    margin-top: 80px;
+  }
   .testimonial__div .test .testimonial__div--heading {
     padding: 0 200px;
+    padding-bottom: 20px;
   }
   .testimonial__div .test .card .testimonial__div--card {
     padding: 30px;
-    height: 450px;
+    height: 312px;
+  }
+  .testimonial__div .test .card .testimonial__div--card .info h3 {
+    font-size: 16px;
+  }
+  .testimonial__div .test .card .testimonial__div--card .info p {
+    font-size: 16px;
+  }
+  .testimonial__div .test .card .testimonial__div--card p {
+    font-size: 18px;
+  }
+  .logo__div {
+    margin-top: 80px;
+  }
+  .project__div {
+    margin-top: 80px;
   }
   .project__div .project .project__div--heading {
-    padding: 0 124px 93px;
+    padding: 0 124px 60px;
   }
   .project__div .project .project__div--container {
-    gap: 80px;
+    gap: 60px;
+  }
+  .counter__div {
+    margin-top: 80px;
+  }
+  .counter__div .counter {
+    padding: 80px 0;
   }
   .counter__div .counter .counter__div--content {
     padding-right: 40px;
+  }
+  .div__blog {
+    margin: 80px 0;
   }
   .div__blog .blog__div--heading {
     padding: 0 66px 52px;
@@ -625,19 +659,22 @@ footer .copyright {
   .div__blog .div__blog--content .div__blog--card .card__tag {
     top: 38%;
   }
+  footer {
+    margin: 80px 0;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     max-width: 720px;
   }
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
   p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .btn__primary {
-    font-size: 12px;
+    font-size: 16px;
   }
   nav .right-nav {
     gap: 20px;
@@ -655,12 +692,15 @@ footer .copyright {
     font-size: 42px;
   }
   .banner__div .container .banner__div--content p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .banner__div .container .banner__div--content .banner__btn {
     padding: 13px 24px;
-    font-size: 8px;
+    font-size: 16px;
     border-radius: 9px;
+  }
+  .work__div {
+    margin: 80px 0;
   }
   .work__div .display__flex {
     padding: 0px;
@@ -675,10 +715,18 @@ footer .copyright {
     gap: 75px;
   }
   .about__div .about .about__div--left {
+    padding: 0;
     width: 50%;
+  }
+  .about__div .about .about__div--left h2 {
+    margin-bottom: 8px;
+  }
+  .about__div .about .about__div--left p {
+    margin-bottom: 12px;
   }
   .about__div .about .about__div--left .about__div--icon {
     align-items: center;
+    margin-bottom: 0px;
   }
   .about__div .about .about__div--left .about__div--icon img {
     height: auto;
@@ -691,10 +739,10 @@ footer .copyright {
     font-size: 12px;
   }
   .about__div .about .about__div--left a {
-    font-size: 9px;
+    font-size: 12px;
   }
   .about__div .about .about__div--left .about__btn {
-    padding: 13px 15px;
+    padding: 8px 15px;
     border-radius: 9px;
   }
   .about__div .about .about__div--right {
@@ -703,38 +751,71 @@ footer .copyright {
   .about__div .about .about__div--right img {
     border-radius: 0px 163.5px 0px 61.5px;
   }
+  .testimonial__div {
+    margin-top: 80px;
+  }
   .testimonial__div .test .testimonial__div--heading {
-    padding: 0px 210px;
+    padding: 0px 172px 20px;
   }
   .testimonial__div .test .card .testimonial__div--card {
-    height: 250px;
+    height: 280px;
+  }
+  .testimonial__div .test .card .testimonial__div--card .info h3 {
+    font-size: 20px;
+  }
+  .testimonial__div .test .card .testimonial__div--card .info p {
+    font-size: 18px;
+  }
+  .testimonial__div .test .card .testimonial__div--card p {
+    font-size: 18px;
+  }
+  .logo__div {
+    margin-top: 80px;
   }
   .logo__div .logo {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 25px;
   }
+  .project__div {
+    margin-top: 80px;
+  }
   .project__div .project .project__div--heading {
-    padding: 0px 160px 93px;
+    padding: 0px 102px 40px;
   }
   .project__div .project .project__div--container {
     gap: 20px;
   }
   .project__div .project .project__div--container .project__div--content .project__content .project__content--left .project__link--primary {
-    font-size: 16px;
+    font-size: 20px;
   }
   .project__div .project .project__div--container .project__div--content .project__content .project__content--left .project__link--secondary {
-    font-size: 12px;
+    font-size: 16px;
   }
   .project__div .project .project__div--container .project__div--content .project__content .project__content--right {
     width: 35px;
     height: auto;
+  }
+  .project__div .project .space {
+    margin-bottom: 30px;
+  }
+  .counter__div {
+    margin-top: 80px;
+  }
+  .counter__div .counter {
+    padding: 80px 0;
   }
   .counter__div .counter .counter__div--content {
     padding-right: 42px;
   }
   .counter__div .counter .counter__div--content h2 {
     font-size: 48px;
+  }
+  .div__blog {
+    margin: 80px 0;
+  }
+  .div__blog .blog__div--heading {
+    padding: 0px 62px 42px;
   }
   .div__blog .div__blog--content {
     flex-wrap: wrap;
@@ -743,8 +824,14 @@ footer .copyright {
   .div__blog .div__blog--content .div__blog--card {
     width: calc(50% - 13.5px);
   }
+  .div__blog .div__blog--content .div__blog--card h2 {
+    font-size: 20px;
+  }
   .div__blog .div__blog--content .div__blog--card .card__tag {
-    top: 45%;
+    top: 48%;
+  }
+  footer {
+    margin: 80px 0;
   }
   .contact__div .contact .contact_btn {
     padding: 13px 18px;
@@ -770,6 +857,9 @@ footer .copyright {
   .container {
     max-width: 540px;
   }
+  h2 {
+    font-size: 40px;
+  }
   .display__flex {
     flex-direction: column;
     justify-content: center;
@@ -791,7 +881,7 @@ footer .copyright {
     max-width: 90%;
   }
   .banner__div .container .banner__div--content h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
   .banner__div .container .banner__div--content p {
     font-size: 12px;
@@ -876,6 +966,10 @@ footer .copyright {
 @media only screen and (max-width: 576px) {
   .container {
     width: 100%;
+    padding: 0 20px;
+  }
+  h2 {
+    font-size: 36px;
   }
   .display__flex {
     flex-direction: column;

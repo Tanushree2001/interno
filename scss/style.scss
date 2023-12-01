@@ -100,15 +100,20 @@ h2 {
   display: none;
 }
 
+
 //dropdown menu style starts here
 .dropdown__menu {
   display: none;
   position: absolute;
-  right: 0;
+  position: fixed;
+  // right: 0;
+  left: 0;
+  top: 0;
   height: 0;
-  top: 90px;
+  // top: 90px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
+  background-color: $menu-color;
   backdrop-filter: blur(15px);
   z-index: 2;
   border-radius: 10px;
@@ -123,6 +128,7 @@ h2 {
 
     a {
       color: $menu-color;
+      color: $white-color;
     }
   }
 }
@@ -715,6 +721,9 @@ footer {
       }
     }
   }
+  .work__div{
+    margin: 80px 0;
+  }
 
   // banner section ends here 
 
@@ -740,40 +749,55 @@ footer {
 
   // testimonial section starts here 
   .testimonial__div {
+    margin-top: 80px;
     .test {
       .testimonial__div--heading {
         padding: 0 200px;
+        padding-bottom: 20px;
       }
 
       .card {
-        // padding: 0 16px;
-        // gap: 16px;
-
         .testimonial__div--card {
-          // padding: 58px 2px 54px;
           padding: 30px;
-          height: 450px;
+          height: 312px;
+          .info{
+            h3{
+              font-size: 16px;
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+          p{
+            font-size: 18px;
+          }
         }
       }
     }
   }
+  .logo__div{
+    margin-top: 80px;
+  }
 
   // project section starts here
   .project__div {
+    margin-top: 80px;
     .project {
       .project__div--heading {
-        padding: 0 124px 93px;
+        padding: 0 124px 60px;
       }
 
       .project__div--container {
-        gap: 80px;
+        gap: 60px;
       }
     }
   }
 
   // counter section starts here
   .counter__div {
+    margin-top: 80px;
     .counter {
+      padding: 80px 0;
       .counter__div--content {
         padding-right: 40px;
       }
@@ -782,6 +806,7 @@ footer {
 
   // blog section starts here
   .div__blog {
+    margin: 80px 0 ;
     .blog__div--heading {
       padding: 0 66px 52px;
     }
@@ -795,6 +820,11 @@ footer {
     }
   }
 
+  //footer
+  footer{
+    margin: 80px 0;
+  }
+
 }
 
 // Tablet design starts here
@@ -805,15 +835,15 @@ footer {
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .btn__primary {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   // navbar starts here
@@ -842,12 +872,12 @@ footer {
         }
 
         p {
-          font-size: 12px;
+          font-size: 16px;
         }
 
         .banner__btn {
           padding: 13px 24px;
-          font-size: 8px;
+          font-size: 16px;
           border-radius: 9px;
         }
       }
@@ -856,6 +886,7 @@ footer {
 
   // work section starts here
   .work__div {
+    margin: 80px 0;
     .display__flex {
       padding: 0px;
       flex-wrap: wrap;
@@ -863,7 +894,7 @@ footer {
 
       .work__div--container {
         width: calc(50% - 42px);
-        padding: 0 58px;
+        padding: 0 58px;  
       }
     }
   }
@@ -873,10 +904,18 @@ footer {
     .about {
       gap: 75px;
       .about__div--left {
+        padding: 0;
         width: 50%;
+        h2{
+          margin-bottom: 8px;
+        }
+        p{
+          margin-bottom: 12px;
+        }
 
         .about__div--icon {
           align-items: center;
+          margin-bottom: 0px;
 
           img {
             height: auto;
@@ -895,11 +934,11 @@ footer {
         }
 
         a {
-          font-size: 9px;
+          font-size: 12px;
         }
 
         .about__btn {
-          padding: 13px 15px;
+          padding: 8px 15px;
           border-radius: 9px;
         }
       }
@@ -915,14 +954,26 @@ footer {
 
   // testimonial section starts here
   .testimonial__div {
+    margin-top: 80px;
     .test {
       .testimonial__div--heading {
-        padding: 0px 210px;
+        padding: 0px 172px 20px;
       }
 
       .card {
         .testimonial__div--card {
-          height: 250px;
+          height: 280px;
+          .info{
+            h3{
+              font-size: 20px;
+            }
+            p{
+              font-size: 18px;
+            }
+          }
+          p{
+            font-size: 18px;
+          }
         }
       }
     }
@@ -930,6 +981,7 @@ footer {
 
   // logo section starts here
   .logo__div {
+    margin-top: 80px;
     .logo {
       flex-wrap: wrap;
       justify-content: space-around;
@@ -939,9 +991,10 @@ footer {
 
   // project section starts here
   .project__div {
+    margin-top: 80px;
     .project {
       .project__div--heading {
-        padding: 0px 160px 93px;
+        padding: 0px 102px 40px;
       }
 
       .project__div--container {
@@ -951,11 +1004,11 @@ footer {
           .project__content {
             .project__content--left {
               .project__link--primary {
-                font-size: 16px;
+                font-size: 20px;
               }
 
               .project__link--secondary {
-                font-size: 12px;
+                font-size: 16px;
               }
             }
 
@@ -966,12 +1019,17 @@ footer {
           }
         }
       }
+      .space{
+        margin-bottom: 30px;
+      }
     }
   }
 
   // counter section starts here
   .counter__div {
+    margin-top: 80px;
     .counter {
+      padding: 80px 0;
       .counter__div--content {
         padding-right: 42px;
 
@@ -984,18 +1042,29 @@ footer {
 
   // blog section starts here
   .div__blog {
+    margin: 80px 0;
+    .blog__div--heading{
+      padding: 0px 62px 42px;
+    }
     .div__blog--content {
       flex-wrap: wrap;
       justify-content: space-around;
 
       .div__blog--card {
         width: calc(50% - 13.5px);
+        h2{
+          font-size: 20px;
+        }
 
         .card__tag {
-          top: 45%;
+          top: 48%;
         }
       }
     }
+  }
+
+  footer{
+    margin: 80px 0;
   }
 
   // contact section starts here
@@ -1044,7 +1113,9 @@ footer {
     max-width: 540px;
     // margin: 0 auto;
   }
-
+  h2{
+    font-size: 40px;
+  }
   .display__flex {
     flex-direction: column;
     justify-content: center;
@@ -1079,7 +1150,7 @@ footer {
         max-width: 90%;
 
         h2 {
-          font-size: 25px;
+          font-size: 24px;
         }
 
         p {
@@ -1218,10 +1289,13 @@ footer {
   .container {
     // max-width: 100%;
     width: 100%;
+    padding: 0 20px;
     // margin: 0 auto;
 
   }
-
+  h2{
+    font-size: 36px;
+  }
   .display__flex {
     flex-direction: column;
     justify-content: center;
